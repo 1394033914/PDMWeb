@@ -1,18 +1,2 @@
-2020-04-22 23:27:01 INFO  main com.pdmweb.app.PdmwebApplication Starting PdmwebApplication on tymymac with PID 5725 (/Users/TymYjmac_Tom/Develop/GitHub/PDMWeb/target/classes started by TymYjmac_Tom in /Users/TymYjmac_Tom/Develop/GitHub/PDMWeb)
-2020-04-22 23:27:01 INFO  main com.pdmweb.app.PdmwebApplication No active profile set, falling back to default profiles: default
-2020-04-22 23:27:02 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-04-22 23:27:02 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-04-22 23:27:02 INFO  main org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 12ms. Found 0 repository interfaces.
-2020-04-22 23:27:03 INFO  main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-04-22 23:27:03 INFO  main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8099 (http)
-2020-04-22 23:27:03 INFO  main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8099"]
-2020-04-22 23:27:03 INFO  main org.apache.catalina.core.StandardService Starting service [Tomcat]
-2020-04-22 23:27:03 INFO  main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-04-22 23:27:03 INFO  main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-2020-04-22 23:27:03 INFO  main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1247 ms
-2020-04-22 23:27:03 INFO  main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-22 23:27:03 INFO  main org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping Adding welcome page template: index
-2020-04-22 23:27:04 INFO  main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-04-22 23:27:04 INFO  main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8099"]
-2020-04-22 23:27:04 INFO  main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8099 (http) with context path ''
-2020-04-22 23:27:04 INFO  main com.pdmweb.app.PdmwebApplication Started PdmwebApplication in 2.827 seconds (JVM running for 3.43)
+2020-04-22 23:30:25 INFO  RMI TCP Connection(15)-127.0.0.1 org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
+2020-04-22 23:30:25 INFO  RMI TCP Connection(15)-127.0.0.1 org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
