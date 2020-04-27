@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
  * @author MrBird
  */
 @Aspect
-@Component
+//@Component
 public class ControllerEndpointAspect extends AspectSupport {
 
     @Autowired

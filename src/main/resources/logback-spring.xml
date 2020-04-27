@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <contextName>iot</contextName>
+    <property name="log.path" value="../log" />
+    <property name="log.maxHistory" value="15" />
+    <!--<property name="log.colorPattern" value="%magenta(%d{yyyy-MM-dd HH:mm:ss}) %highlight(%-5level) %yellow(%thread) %green(%logger) %msg%n"/>-->
+    <property name="log.colorPattern" value="%magenta(%d{yyyy-MM-dd HH:mm:ss}) %highlight(%-5level) %green(%logger{1}) %msg%n"/>
+    <property name="log.pattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5level %thread %logger %msg%n"/>
+
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${log.colorPattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!--输出到文件-->
+    <appender name="file_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/info/info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <MaxHistory>${log.maxHistory}</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/error/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="console" />
+    </root>
+
+    <root level="info">
+        <appender-ref ref="file_info" />
+        <appender-ref ref="file_error" />
+    </root>
+</configuration>
+
+<!--2020-04-25 08:54:10.727  INFO 10277 -&#45;&#45; [           main] com.pdmweb.PdmwebApplication             : Starting PdmwebApplication on tymymac with PID 10277 (/Users/TymYjmac_Tom/Develop/GitHub/PDMWeb/target/classes started by TymYjmac_Tom in /Users/TymYjmac_Tom/Develop/GitHub/PDMWeb)-->
+<!--2020-04-25 08:54:10.736  INFO 10277 -&#45;&#45; [           main] com.pdmweb.PdmwebApplication             : No active profile set, falling back to default profiles: default-->
+<!--2020-04-25 08:54:11.452  WARN 10277 -&#45;&#45; [           main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pdmweb]' package. Please check your configuration.-->
+<!--2020-04-25 08:54:11.576  INFO 10277 -&#45;&#45; [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!-->
+<!--2020-04-25 08:54:11.578  INFO 10277 -&#45;&#45; [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.-->
+<!--2020-04-25 08:54:11.599  INFO 10277 -&#45;&#45; [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.-->
+<!--2020-04-25 08:54:11.875  INFO 10277 -&#45;&#45; [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)-->
+<!--2020-04-25 08:54:12.106  INFO 10277 -&#45;&#45; [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8099 (http)-->
+<!--2020-04-25 08:54:12.113  INFO 10277 -&#45;&#45; [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]-->
+<!--2020-04-25 08:54:12.113  INFO 10277 -&#45;&#45; [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]-->
+<!--2020-04-25 08:54:12.180  INFO 10277 -&#45;&#45; [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext-->
+<!--2020-04-25 08:54:12.180  INFO 10277 -&#45;&#45; [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1391 ms-->
+<!--2020-04-25 08:54:12.782  INFO 10277 -&#45;&#45; [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'-->
+<!--2020-04-25 08:54:12.839  INFO 10277 -&#45;&#45; [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index-->
+<!--2020-04-25 08:54:13.267  INFO 10277 -&#45;&#45; [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'-->
+<!--2020-04-25 08:54:13.336  INFO 10277 -&#45;&#45; [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''-->
+<!--2020-04-25 08:54:13.339  INFO 10277 -&#45;&#45; [           main] com.pdmweb.PdmwebApplication             : Started PdmwebApplication in 3.074 seconds (JVM running for 3.926)-->

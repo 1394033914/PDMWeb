@@ -15,19 +15,26 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
-  aop:
-    proxy-target-class: true
+#  aop:
+#    proxy-target-class: true
 
   # 指定静态资源的路径
 #  resources:
-#    static-locations: classpath:/static/,classpath:/views/,file:${web.upload},file:${web.ueditorUpload}
+#    static-locations: classpath:static/,classpath:templates/,file:${web.upload},file:${web.ueditorUpload}
   datasource:
-   dynamic:
+#   dynamic:
       # 是否开启 SQL日志输出，生产环境建议关闭，有性能损耗
-      p6spy: true
-      datasource:
-       driver-class-name: org.sqlite.JDBC
-       url: jdbc:sqlite::resource:static/sqlite/pdmweb.db
-       username: 
-       password:
+    p6spy: true
+#    datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite::resource:static/sqlite/pdmweb.db
+    username:
+    password:
+
+mybatis:
+  type-aliases-package: com.pdmweb.*.entity
+  mapper-locations: classpath:mapper/*/*.xml
+  configuration:
+    use-generated-keys: true
+    map-underscore-to-camel-case: true
 

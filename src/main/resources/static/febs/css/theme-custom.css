@@ -1,0 +1,101 @@
+/* Add here all your CSS customizations */
+.logo-container {float: left;font-size: 30px;width: 320px;line-height: 56px;color: #555555;margin-left: 10px;}
+
+/* common */
+
+/* a:link {color: #29af98;text-decoration: none;} */
+/* a:visited {color: #29af98;text-decoration: none;} */
+/* a:hover {color: #29af98;text-decoration: none;} */
+/* a:active {color: #159588;text-decoration: none;} */
+/* a 标签 */
+/* .datagrid-pager.pagination tbody a:hover { background-color: #e8e8e9; border: 1px solid #a9a9aa; } */
+
+html, body { height: 100%; width:100%}
+body{ margin:0}
+
+.font-12 { font-size:12px; } .font-14 {font-size:14px;} .font-16 {font-size:16px;} .font-18 { font-size:18px; } .font-20 { font-size:20px; } .font-22 { font-size:22px; } .font-24 {font-size: 24px;} .font-26 { font-size:26px; } .font-28 { font-size:28px; } .font-30 { font-size:30px; } .font-32 { font-size:32px; } .font-34 { font-size:34px; }
+.font-c1 { color: #333333; }
+.font-c2 {color: #707070;}
+.line-20 {line-height:20px;} .line-28 { line-height:28px; }
+
+.float-l {float:left;} .float-r {float:right;}
+
+.margin-auto {margin:auto;} .padding-auto { padding:auto; }
+
+.text-l { text-align:left; } .text-c {text-align:center;} .text-r { text-align:right; }
+
+.max-height {height:100%;} .max-width { width:100%; }
+.width-8 {width:80%} .width-6 {width:60%} .width-4 {width:40%}
+
+.center-durl {display: flex;justify-content: center;align-items: center;} 
+.vertical {display: -webkit-box;-webkit-box-pack:center;/* -webkit-box-align:center; */-webkit-box-orient: vertical;/* text-align: center; */}
+.level {}
+
+.white { color:#ffffff; } .green { color:#29af98; } .white-back { background:#ffffff; } .green-back { background:#29af98!important; } .red { color:red; } .blue {color:#2f9fd7;}
+.frame-color {/* border:1px solid rgb(211, 211, 212); */} .frame-color-right {border-right: 1px solid rgb(211, 211, 212);}
+.icon-color {/* color: rgb(142, 143, 146); */} .icon-color-1 { color: rgb(186, 186, 186); }
+
+
+
+.li { list-style: none; }
+
+.hide { display:none; }
+
+.level { display: flex; justify-content: center; }
+
+.click { cursor:pointer; }
+
+/* checkbox */
+.layui-icon-ok:before { content: "\e605"; }
+.layui-icon { font-family: layui-icon!important; font-size: 16px; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+
+
+/* bottom */
+.btn-white {background: #f5f5f5;border-radius: 2px;border: solid 1px #cccccc;}
+.btn-active-white:active { background:#eeedee; color:#c3c2c4; }
+
+.btn-hover-default:hover { background: #159588;text-decoration: none; }
+.btn-active-default:active { background: #159588;text-decoration: none; }
+
+.btn-blue {background: #2f9fd7;border-radius: 2px; color:#ffffff;}
+.btn-active-blue:active { background:#2fa9e5; color:#ffffff; }
+
+
+
+/* tool */
+.label-cls-s {margin-left: 10px;margin-right: 5px;}
+.tool-cls {margin-top: 10px;margin-left: 10px;}
+.tool-form { width:100%;height:65px;background-color:#ffffff; }
+
+
+/* input */
+.input-click-1:focus { outline:none; border: 1px solid #1cb098; }
+.input-cls {line-height: 28px;border: 1px solid #cccccc;border-radius: 5px;font-size:14px;padding-left: 5px;}
+.input-focus:focus {  box-shadow: 0 0 3px 0 #d7d6d7; }
+
+.input-click-2:active { background:#e8e8e9; }
+ input::-webkit-input-placeholder{ color:#999999; }
+
+
+
+/* 其他样式 */
+.div_form_top{ width: 50%; margin:0px auto } 
+.div_form_button{width: 100%;margin:0px auto;margin-top: 20px;text-align: center;}
+.easyui-linkbutton {  width: auto; border: 1px solid #95b8e7; } 
+.form-group div {/* margin-top:6px; */} 
+.overflow-x-open {overflow-x:auto;min-width: 1605px;}
+.form-horizontal { margin-top:20px; }
+.label-cls label { padding-top: 0!important;}
+
+
+/* 列表样式 */
+.list-class {width: 100%;height: 100%;/* background-color: #f6f6f6; */}
+
+
+/* width */
+.width-70 { width:70px; } .width-82 { width:82px; } .width-84 { width:84px; } .width-110 { width:100; } .width-150 { width:150px; } 
+.maxWH {width: 100%;height: 100%;}
+
+
+
