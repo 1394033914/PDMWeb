@@ -1,4 +1,4 @@
-package com.pdmweb.app;
+package com.pdmweb;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

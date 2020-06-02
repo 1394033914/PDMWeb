@@ -22,6 +22,12 @@ public class DateUtil {
 
     public static final String CST_TIME_PATTERN = "EEE MMM dd HH:mm:ss zzz yyyy";
 
+    private static DateTimeFormatter df1 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+    public static String getNowTime() {
+        return df1.format(LocalDateTime.now());
+    }
+
     public static String formatFullTime(LocalDateTime localDateTime) {
         return formatFullTime(localDateTime, FULL_TIME_PATTERN);
     }

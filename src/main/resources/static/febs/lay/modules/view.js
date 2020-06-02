@@ -1,8 +1,8 @@
 //视图路由
 layui
     .extend({
-        loadBar: 'lay/modules/loadBar',
-        dropdown: 'lay/modules/dropdown'
+        loadBar: 'febs/lay/modules/loadBar',
+        dropdown: 'febs/lay/modules/dropdown'
     })
     .define(
         ['jquery', 'laytpl', 'element', 'form', 'loadBar', 'dropdown'],
@@ -10,7 +10,7 @@ layui
             var $ = layui.jquery;
             var laytpl = layui.laytpl;
             var conf = layui.conf;
-            conf.viewTabs = currentUser.isTab === '1';
+            // conf.viewTabs = currentUser.isTab === '1';
             var loadBar = layui.loadBar;
             var self = {
                 ie8:

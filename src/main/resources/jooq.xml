@@ -1,0 +1,50 @@
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.13.0.xsd">
+	<!-- Configure the database connection here -->
+	<jdbc>
+		<driver>org.sqlite.JDBC</driver>
+		<url>jdbc:sqlite:src/main/java/com/pdmweb/pdmweb.db</url>
+		<user></user>
+		<password></password>
+	</jdbc>
+
+	<!--<logging>ERROR</logging>-->
+	<generator>
+		<name>org.jooq.codegen.JavaGenerator</name>
+
+		<database>
+			<name>org.jooq.meta.sqlite.SQLiteDatabase</name>
+
+			<!-- 选择数据库 -->
+			<!--<inputSchema>main</inputSchema>-->
+
+			<!-- 包含数据表 -->
+			<includes>
+				(pdm_list)|
+				(pdm_table)|
+				(pdm_table_field)|
+				(pdm_user)|
+			</includes>
+
+			<!-- 排除数据表 -->
+			<excludes></excludes>
+
+		</database>
+
+		<generate>
+			<!--生成dao和pojo-->
+			<!--<daos>true</daos>-->
+			<!--<pojos>true</pojos>-->
+			<!--把数据库时间类型映射到java 8时间类型-->
+			<javaTimeTypes>true</javaTimeTypes>
+		</generate>
+
+		<target>
+			<!-- 包名 -->
+			<packageName>com.pdmweb.base.jooq</packageName>
+			<!-- 项目路径 -->
+			<directory>src/main/java</directory>
+			<encoding>UTF-8</encoding>
+			<clean>true</clean>
+		</target>
+	</generator>
+</configuration>

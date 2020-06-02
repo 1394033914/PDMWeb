@@ -1,2 +1,0 @@
-2020-04-22 23:30:25 INFO  RMI TCP Connection(15)-127.0.0.1 org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
-2020-04-22 23:30:25 INFO  RMI TCP Connection(15)-127.0.0.1 org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'

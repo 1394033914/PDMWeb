@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Component
+//@Component
 public @interface Helper {
     @AliasFor(annotation = Component.class)
     String value() default "";

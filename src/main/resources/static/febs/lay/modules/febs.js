@@ -1,7 +1,7 @@
 layui.extend({
-    conf: 'config',
-    api: 'lay/modules/api',
-    view: 'lay/modules/view'
+    conf: 'febs/config',
+    api: 'febs/lay/modules/api',
+    view: 'febs/lay/modules/view'
 }).define(['conf', 'view', 'api', 'jquery', 'table'], function (exports) {
     POPUP_DATA = {};
     var conf = layui.conf;
@@ -15,7 +15,7 @@ layui.extend({
     var self = {};
     var windowWidth = $(window).width();
 
-    conf.viewTabs = currentUser.isTab === '1';
+    // conf.viewTabs = currentUser.isTab === '1';
     self.route = layui.router();
     self.view = view;
     self.api = layui.api;
@@ -497,6 +497,45 @@ layui.extend({
         self.popup(params);
     };
 
+    //layui open核心方法，基本类型type=1 页面层封装
+    self.modal.openTo = function (title, params) {
+        params = $.extend({
+            maxmin: true,
+            shadeClose: false,
+            title: [
+                (title || '请填写头部信息'),
+                'font-size:16px;color:#08132b;line-height:46px;padding-bottom:0;border-bottom:1px solid #fcfcfc;background-color:#fcfcfc'
+            ]
+        }, params);
+
+        var success = params.success || function () {
+        };
+        params.skin = 'layui-layer-admin-page';
+        POPUP_DATA = params.data || {};
+
+        var defaultParams = {
+            type: 1,
+            area: $(window).width() <= 750 ? ['90%', '90%'] : ['60%', '90%'],
+            shadeClose: true
+        };
+
+        var htmlElem = params.content;
+
+        if (params.title === undefined) {
+            params.title = htmlElem.find('title').text() || '信息';
+            if (params.title) htmlElem.find('title').remove()
+        }
+
+        params.content = htmlElem.html();
+        params.success = function (layer, index) {
+            success(layer, index);
+        };
+
+        params = $.extend(defaultParams, params);
+        layer.open($.extend(defaultParams, params));
+
+    };
+
     self.modal.view = function (title, url, params) {
         params = $.extend({
             url: url,
@@ -517,7 +556,7 @@ layui.extend({
         var defaultSetting = {
             cellMinWidth: 80,
             page: true,
-            skin: 'line',
+            skin: 'line row',
             limit: 10,
             limits: [5, 10, 20, 30, 40, 100],
             autoSort: false,
@@ -606,6 +645,25 @@ layui.extend({
         }
         return true;
     };
+
+    self.nativeEqualAToB = function (a, b) {
+        for (var fields in a) {
+            if (!compare(a[fields], b[fields])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    self.nativeEqualBToA = function (a, b) {
+        for (var fields in b) {
+            if (!compare(a[fields], b[fields])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     function resolveResponse(r, f) {
         if (r.code === 200) {

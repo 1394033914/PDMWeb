@@ -13,19 +13,20 @@
 html, body { height: 100%; width:100%}
 body{ margin:0}
 
-.font-12 { font-size:12px; } .font-14 {font-size:14px;} .font-16 {font-size:16px;} .font-18 { font-size:18px; } .font-20 { font-size:20px; } .font-22 { font-size:22px; } .font-24 {font-size: 24px;} .font-26 { font-size:26px; } .font-28 { font-size:28px; } .font-30 { font-size:30px; } .font-32 { font-size:32px; } .font-34 { font-size:34px; }
-.font-c1 { color: #333333; }
-.font-c2 {color: #707070;}
-.line-20 {line-height:20px;} .line-28 { line-height:28px; }
+.ft-12 { font-size:12px; } .ft-14 {font-size:14px;} .ft-16 {font-size:16px;} .ft-18 { font-size:18px; } .ft-20 { font-size:20px; } .ft-22 { font-size:22px; } .ft-24 {font-size: 24px;} .ft-26 { font-size:26px; } .ft-28 { font-size:28px; } .ft-30 { font-size:30px; } .ft-32 { font-size:32px; } .ft-34 { font-size:34px; }
+.ft-c1 { color: #333333; }
+.ft-c2 {color: #707070;}
+.l-ht20 {line-height:20px;} .l-ht28 { line-height:28px; }
 
-.float-l {float:left;} .float-r {float:right;}
+.ft-l {float:left;} .ft-r {float:right;}
 
-.margin-auto {margin:auto;} .padding-auto { padding:auto; }
+.mg-at {margin:auto;} .pd-at { padding:auto; }
 
-.text-l { text-align:left; } .text-c {text-align:center;} .text-r { text-align:right; }
+.txt-l { text-align:left; } .txt-c {text-align:center;} .txt-r { text-align:right; }
 
-.max-height {height:100%;} .max-width { width:100%; }
-.width-8 {width:80%} .width-6 {width:60%} .width-4 {width:40%}
+.max-ht {height:100%;} .max-wth { width:100%; }
+.wth-1ct {width:10%} .wth-2ct {width:20%} .wth-3ct {width:30%} .wth-4ct {width:40%} .wth-5ct {width:50%} .wth-6ct {width:60%} .wth-7ct {width:70%} .wth-8ct {width:80%} .wth-9ct {width:90%} .wth-10ct {width:100%}
+.wth-1p {width:10px} .wth-2p {width:20px} .wth-3p {width:30px} .wth-4p {width:40px} .wth-5p {width:50px} .wth-6p {width:60px} .wth-7p {width:70px} .wth-8p {width:80px} .wth-9p {width:90px} .wth-10p {width:100px}
 
 .center-durl {display: flex;justify-content: center;align-items: center;} 
 .vertical {display: -webkit-box;-webkit-box-pack:center;/* -webkit-box-align:center; */-webkit-box-orient: vertical;/* text-align: center; */}
